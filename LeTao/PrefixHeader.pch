@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  LeTao
+//
+//  Created by WelKin Xu on 16/6/3.
+//  Copyright © 2016年 WelKin Xu. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <AFNetworking.h>
+/**AFN对UI开头类的Category，例如imaegView本身不带由加载网络图片的功能，AF可提供此功能。由网络操作时可以在电池条显示活动提示*/
+#import <UIKit+AFNetworking.h>
+
+#import <Masonry.h>
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+
+#import <YYKit.h>
+
+//自定义扩展分类
+#import "UIView+HUD.h"
+#import "UIScrollView+Refresh.h"
+#import "NSObject+Networking.h"
+#import "AppDelegate+System.h"
+#import "NSObject+Parse.h"
+#import "AppDelegate+Location.h"
+
+// 下方定义宏是从Masonry中拷贝而来，可以将mas_equalTo形式转化为equalTo，写起来更顺手
+#define equalTo(...)                     mas_equalTo(__VA_ARGS__)
+#define greaterThanOrEqualTo(...)        mas_greaterThanOrEqualTo(__VA_ARGS__)
+#define lessThanOrEqualTo(...)           mas_lessThanOrEqualTo(__VA_ARGS__)
+#define offset(...)                      mas_offset(__VA_ARGS__)
+
+//引入自定义宏文件
+#import "Constants.h"
+
+
+#endif /* PrefixHeader_pch */
